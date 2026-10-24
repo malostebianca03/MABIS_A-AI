@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MABIS Açaí</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="tigela">🍇</div>
+    <h1>MABIS AÇAÍ</h1>
+    <p>Monte o seu açaí do seu jeito</p>
+  </header>
+
+  <main>
+
+    <h2>1. Escolha o copo</h2>
+    <div class="grade">
+      <label class="item copo"><input type="radio" name="copo" value="300" checked>
+        <span class="nome">300ml</span><span class="preco">R$ 14,00 · até 2 adicionais</span></label>
+      <label class="item copo"><input type="radio" name="copo" value="500">
+        <span class="nome">500ml</span><span class="preco">R$ 20,00 · até 4 adicionais</span></label>
+    </div>
+
+    <h2>2. Adicionais <span id="contador">0/2</span></h2>
+    <p id="alerta"></p>
+
+    <h3>🍓 Frutas</h3>
+    <div class="grade">
+      <label class="item"><input type="checkbox" name="adicional" value="Banana" data-preco="2"><span class="nome">Banana</span><span class="preco">+R$ 2,00</span></label>
+      <label class="item"><input type="checkbox" name="adicional" value="Morango" data-preco="3"><span class="nome">Morango</span><span class="preco">+R$ 3,00</span></label>
+      <label class="item"><input type="checkbox" name="adicional" value="Uva" data-preco="3"><span class="nome">Uva</span><span class="preco">+R$ 3,00</span></label>
+      <label class="item"><input type="checkbox" name="adicional" value="Kiwi" data-preco="3"><span class="nome">Kiwi</span><span class="preco">+R$ 3,00</span></label>
+      <label class="item"><input type="checkbox" name="adicional" value="Manga" data-preco="3"><span class="nome">Manga</span><span class="preco">+R$ 3,00</span></label>
+    </div>
+
+    <h3>🥛 Cremes e coberturas</h3>
+    <div class="grade">
+      <label class="item"><input type="checkbox" name="adicional" value="Leite condensado" data-preco="2"><span class="nome">Leite condensado</span><span class="preco">+R$ 2,00</span></label>
+      <label class="item"><input type="checkbox" name="adicional" value="Leite em pó" data-preco="2"><span class="nome">Leite em pó</span><span class="preco">+R$ 2,00</span></label>
+      <label class="item"><input type="checkbox" name="adicional" value="Creme de ninho" data-preco="4"><span class="nome">Creme de ninho</span><span class="preco">+R$ 4,00</span></label>
+      <label class="item"><input type="checkbox" name="adicional" value="Creme de avelã" data-preco="5"><span class="nome">Creme de avelã</span><span class="preco">+R$ 5,00</span></label>
+      <label class="item"><input type="checkbox" name="adicional" value="Pasta de amendoim" data-preco="4"><span class="nome">Pasta de amendoim</span><span class="preco">+R$ 4,00</span></label>
+      <label class="item"><input type="checkbox" name="adicional" value="Cobertura de chocolate" data-preco="2"><span class="nome">Cobertura de chocolate</span><span class="preco">+R$ 2,00</span></label>
+      <label class="item"><input type="checkbox" name="adicional" value="Cobertura de morango" data-preco="2"><span class="nome">Cobertura de morango</span><span class="preco">+R$ 2,00</span></label>
+      <label class="item"><input type="checkbox" name="adicional" value="Cobertura de caramelo" data-preco="2"><span class="nome">Cobertura de caramelo</span><span class="preco">+R$ 2,00</span></label>
+      <label class="item"><input type="checkbox" name="adicional" value="Mel" data-preco="2"><span class="nome">Mel</span><span class="preco">+R$ 2,00</span></label>
+    </div>
+
+    <h3>🥜 Crocantes</h3>
+    <div class="grade">
+      <label class="item"><input type="checkbox" name="adicional" value="Granola" data-preco="2"><span class="nome">Granola</span><span class="preco">+R$ 2,00</span></label>
+      <label class="item"><input type="checkbox" name="adicional" value="Paçoca" data-preco="3"><span class="nome">Paçoca</span><span class="preco">+R$ 3,00</span></label>
+      <label class="item"><input type="checkbox" name="adicional" value="Amendoim" data-preco="2"><span class="nome">Amendoim</span><span class="preco">+R$ 2,00</span></label>
+      <label class="item"><input type="checkbox" name="adicional" value="Castanha de caju" data-preco="4"><span class="nome">Castanha de caju</span><span class="preco">+R$ 4,00</span></label>
+      <label class="item"><input type="checkbox" name="adicional" value="Coco ralado" data-preco="2"><span class="nome">Coco ralado</span><span class="preco">+R$ 2,00</span></label>
+      <label class="item"><input type="checkbox" name="adicional" value="Cereal crocante" data-preco="3"><span class="nome">Cereal crocante</span><span class="preco">+R$ 3,00</span></label>
+      <label class="item"><input type="checkbox" name="adicional" value="Achocolatado crocante" data-preco="4"><span class="nome">Achocolatado crocante</span><span class="preco">+R$ 4,00</span></label>
+    </div>
+
+    <h3>🍫 Doces</h3>
+    <div class="grade">
+      <label class="item"><input type="checkbox" name="adicional" value="Granulado de chocolate" data-preco="2"><span class="nome">Granulado de chocolate</span><span class="preco">+R$ 2,00</span></label>
+      <label class="item"><input type="checkbox" name="adicional" value="Confete" data-preco="3"><span class="nome">Confete</span><span class="preco">+R$ 3,00</span></label>
+      <label class="item"><input type="checkbox" name="adicional" value="Gotas de chocolate" data-preco="3"><span class="nome">Gotas de chocolate</span><span class="preco">+R$ 3,00</span></label>
+      <label class="item"><input type="checkbox" name="adicional" value="Jujuba" data-preco="3"><span class="nome">Jujuba</span><span class="preco">+R$ 3,00</span></label>
+      <label class="item"><input type="checkbox" name="adicional" value="Marshmallow" data-preco="3"><span class="nome">Marshmallow</span><span class="preco">+R$ 3,00</span></label>
+      <label class="item"><input type="checkbox" name="adicional" value="Brownie" data-preco="4"><span class="nome">Brownie</span><span class="preco">+R$ 4,00</span></label>
+    </div>
+
+    <h2>3. Seus dados</h2>
+    <label class="campo">Nome</label>
+    <input type="text" id="nome" placeholder="Seu nome">
+
+    <label class="campo">Telefone com DDD</label>
+    <input type="tel" id="telefone" placeholder="41999999999">
+
+    <label class="campo">Bairro</label>
+    <select id="bairro">
+      <option value="">Selecione...</option>
+    </select>
+
+    <h2>Resumo do pedido</h2>
+    <div class="resumo">
+      <p>Copo: <span id="valorCopo">300ml</span></p>
+      <p>Adicionais: <span id="listaAdicionais">nenhum</span></p>
+      <p>Açaí: <span id="valorAcai">R$ 14,00</span></p>
+      <p>Entrega: <span id="valorEntrega">R$ 0,00</span></p>
+      <p class="total">Total: <span id="valorTotal">R$ 14,00</span></p>
+    </div>
+
+    <button id="botao">Confirmar pedido</button>
+    <p id="mensagem"></p>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
